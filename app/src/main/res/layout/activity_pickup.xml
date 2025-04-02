@@ -1,0 +1,178 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PickupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-Waste Pickup Request"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#00796B"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"/>
+
+        <!-- Auto-generated Request ID -->
+        <EditText
+            android:id="@+id/etId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Request ID (Auto-generated)"
+            android:focusable="false"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:clickable="false"
+            android:drawableStart="@android:drawable/ic_menu_info_details"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Full Name -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:drawableStart="@android:drawable/ic_menu_edit"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"/>
+
+        <!-- Phone Number -->
+        <EditText
+            android:id="@+id/etPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:drawableStart="@android:drawable/ic_menu_call"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Waste Type Spinner -->
+        <Spinner
+            android:id="@+id/spinnerWasteType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:entries="@array/waste_types"/>
+
+        <!-- Pickup Date -->
+        <EditText
+            android:id="@+id/etPickupDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pickup Date (YYYY-MM-DD)"
+            android:focusable="false"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:drawableStart="@android:drawable/ic_menu_my_calendar"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginTop="10dp"/>
+
+
+        <!-- Status (Pending) -->
+        <EditText
+            android:id="@+id/etStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Status (Pending)"
+            android:focusable="false"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:clickable="false"
+            android:text="Pending"
+            android:drawableStart="@android:drawable/ic_menu_info_details"
+            android:padding="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_marginTop="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- ImageView to display the captured image -->
+            <ImageView
+                android:id="@+id/ivCapturedImage"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginEnd="10dp" /> <!-- Margin to separate the button from image -->
+
+            <!-- Button for Camera (Capture Photo) -->
+            <Button
+                android:id="@+id/btnCapturePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capture Photo"
+                android:textAllCaps="false"
+                android:backgroundTint="#00796B"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+
+        <!-- Location (TextView with Button inside) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Fetching Location..."
+                android:drawableStart="@android:drawable/ic_menu_compass"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:background="@android:drawable/editbox_background"/>
+
+            <Button
+                android:id="@+id/btnGetLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get Location"
+                android:textAllCaps="false"
+                android:backgroundTint="#00796B"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"/>
+        </LinearLayout>
+
+        <!-- Submit Pickup Request -->
+        <Button
+            android:id="@+id/btnSubmitPickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Request Pickup"
+            android:textAllCaps="false"
+            android:backgroundTint="#00796B"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+</ScrollView>

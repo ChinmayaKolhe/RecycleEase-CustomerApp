@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">E-Waste Management</string>
+    <string-array name="waste_types">
+        <item>Select Waste Type</item>
+        <item>Electronic Waste</item>
+        <item>Plastic Waste</item>
+        <item>Metal Waste</item>
+        <item>Paper Waste</item>
+        <item>Glass Waste</item>
+    </string-array>
+    <string-array name="donation_items">
+        <item>Select Item To Donate</item>
+        <item>Laptop</item>
+        <item>Mobile Phone</item>
+        <item>Tablet</item>
+        <item>Television</item>
+        <item>Printer</item>
+        <item>Camera</item>
+        <item>Other Electronics</item>
+    </string-array>
+    <string-array name="device_types">
+        <item>Select Device Type</item>
+        <item>Smartphone</item>
+        <item>Laptop</item>
+        <item>Tablet</item>
+        <item>Desktop</item>
+        <item>TV</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="device_conditions">
+        <item>Select Condition</item>
+        <item>Excellent</item>
+        <item>Good</item>
+        <item>Average</item>
+        <item>Poor</item>
+        <item>Not Working</item>
+    </string-array>
+</resources>

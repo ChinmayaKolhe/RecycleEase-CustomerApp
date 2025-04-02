@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "309540582129",
+    "project_id": "recycleeaseapp",
+    "storage_bucket": "recycleeaseapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309540582129:android:11d23dbc6f597e73c0af50",
+        "android_client_info": {
+          "package_name": "com.example.recycleease"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7S6qFKI3KE212XpIKC4Nc-APwv6TOfXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309540582129:android:ba2d9017536670efc0af50",
+        "android_client_info": {
+          "package_name": "com.example.recycleease_customerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7S6qFKI3KE212XpIKC4Nc-APwv6TOfXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

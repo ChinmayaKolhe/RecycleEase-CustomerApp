@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Bot Message (Left) -->
+    <LinearLayout
+        android:id="@+id/botMessageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bot_message_bg"
+        android:padding="12dp"
+        android:layout_gravity="start"
+        android:visibility="gone"
+        android:layout_marginRight="50dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/botMessageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <View android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+
+    <!-- User Message (Right) -->
+    <LinearLayout
+        android:id="@+id/userMessageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_message_bg"
+        android:padding="12dp"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:layout_marginLeft="50dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/userMessageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>
