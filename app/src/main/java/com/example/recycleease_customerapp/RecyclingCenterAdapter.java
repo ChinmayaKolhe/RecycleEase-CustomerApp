@@ -6,14 +6,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import java.util.ArrayList;
+import java.util.List;
 
 public class RecyclingCenterAdapter extends RecyclerView.Adapter<RecyclingCenterAdapter.ViewHolder> {
+    private List<RecyclingCenter> recyclingCenterList;
 
-    private ArrayList<RecyclingCenter> centerList;
-
-    public RecyclingCenterAdapter(ArrayList<RecyclingCenter> centerList) {
-        this.centerList = centerList;
+    public RecyclingCenterAdapter(List<RecyclingCenter> recyclingCenterList) {
+        this.recyclingCenterList = recyclingCenterList;
     }
 
     @NonNull
@@ -25,28 +24,32 @@ public class RecyclingCenterAdapter extends RecyclerView.Adapter<RecyclingCenter
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        RecyclingCenter center = centerList.get(position);
+        RecyclingCenter center = recyclingCenterList.get(position);
+        holder.tvCenterName.setText(center.getName() != null ? center.getName() : "Unknown");
+        holder.tvCenterAddress.setText(center.getAddress() != null ? "Address: " + center.getAddress() : "Address: Not available");
+        holder.tvCenterContact.setText(center.getContact() != null ? "Contact: " + center.getContact() : "Contact: Not available");
+        holder.tvWasteTypes.setText(center.getWasteTypes() != null ? "Waste Types: " + center.getWasteTypes() : "Waste Types: Not available");
+        holder.tvCenterDescription.setText(center.getDescription() != null ? "Description: " + center.getDescription() : "Description: Not available");
+        holder.tvCenterWorkingHours.setText(center.getWorkingHours() != null ? "Working Hours: " + center.getWorkingHours() : "Working Hours: Not available");
 
-        if (center != null) {
-            holder.tvName.setText(center.getName() != null ? center.getName() : "No Name");
-            holder.tvAddress.setText(center.getLocation() != null ? center.getLocation() : "No Address");
-            holder.tvContact.setText("Contact: " + (center.getContact() != null ? center.getContact() : "No Contact"));
-        }
     }
 
     @Override
     public int getItemCount() {
-        return centerList.size();
+        return recyclingCenterList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvName, tvAddress, tvContact;
+        TextView tvCenterName, tvCenterAddress, tvCenterContact, tvWasteTypes, tvCenterDescription, tvCenterWorkingHours;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvName = itemView.findViewById(R.id.tvCenterName);
-            tvAddress = itemView.findViewById(R.id.tvCenterAddress);
-            tvContact = itemView.findViewById(R.id.tvCenterContact);
+            tvCenterName = itemView.findViewById(R.id.tvCenterName);
+            tvCenterAddress = itemView.findViewById(R.id.tvCenterAddress);
+            tvCenterContact = itemView.findViewById(R.id.tvCenterContact);
+            tvWasteTypes = itemView.findViewById(R.id.tvWasteTypes);
+            tvCenterDescription = itemView.findViewById(R.id.tvCenterDescription);
+            tvCenterWorkingHours = itemView.findViewById(R.id.tvCenterWorkingHours);
         }
     }
 }
